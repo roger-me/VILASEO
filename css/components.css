@@ -785,7 +785,7 @@
 .hero-animated {
   position: relative;
   overflow: hidden;
-  background: url('../assets/top-banner.jpg') no-repeat center center;
+  background: url('/assets/top-banner.jpg') no-repeat center center;
   background-size: cover;
   padding-bottom: calc(var(--space-2xl) + 150px);
   margin-bottom: var(--space-xl);
