@@ -484,7 +484,7 @@
 
 .metric-value {
   font-size: var(--text-headline);
-  font-weight: var(--weight-semibold);
+  font-weight: 600;
   color: var(--color-black);
 }
 
