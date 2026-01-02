@@ -808,6 +808,17 @@
   z-index: 1;
 }
 
+/* Page-specific hero backgrounds */
+.hero-services {
+  background: url('/assets/services.jpg?v=1') no-repeat center center;
+  background-size: cover;
+}
+
+.hero-stories {
+  background: url('/assets/stories.jpg?v=1') no-repeat center center;
+  background-size: cover;
+}
+
 .hero-animated .hero-eyebrow,
 .hero-animated .hero-title,
 .hero-animated .hero-subtitle {
