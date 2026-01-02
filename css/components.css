@@ -4,15 +4,25 @@
 /* Logo */
 /* ==================== */
 .logo {
-  font-size: 24px;
-  font-weight: var(--weight-semibold);
-  letter-spacing: var(--tracking-tight);
-  color: var(--color-black);
+  display: flex;
+  align-items: center;
   text-decoration: none;
+}
+
+.logo img {
+  height: 28px;
+  width: auto;
+  filter: brightness(0);
 }
 
 .logo:hover {
   opacity: 0.7;
+}
+
+/* White logo for dark backgrounds */
+.bg-dark .logo img,
+.footer .logo img {
+  filter: brightness(0) invert(1);
 }
 
 /* ==================== */
@@ -330,6 +340,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.kol-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .kol-card-image {
@@ -777,6 +792,31 @@
 .cta-section .text-body-large {
   margin-bottom: var(--space-lg);
   opacity: 0.8;
+}
+
+/* Check List */
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.check-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--text-body);
+  color: var(--color-white);
+  opacity: 0.85;
+}
+
+.check-list li i {
+  font-size: 24px;
+  color: var(--color-white);
+  flex-shrink: 0;
 }
 
 /* ==================== */
