@@ -96,12 +96,18 @@
 .nav-menu a {
   font-size: var(--text-caption);
   color: var(--color-gray-dark);
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
 }
 
-.nav-menu a:hover,
+.nav-menu a:hover {
+  color: var(--color-black);
+}
+
 .nav-menu a.active {
   color: var(--color-black);
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 .nav-toggle {
