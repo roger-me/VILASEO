@@ -63,6 +63,10 @@
   color: var(--color-gray-dark);
 }
 
+.bg-dark .text-eyebrow {
+  color: var(--color-gray-medium);
+}
+
 /* Text Colors */
 .text-primary {
   color: var(--color-black);

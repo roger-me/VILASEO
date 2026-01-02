@@ -30,11 +30,11 @@
 }
 
 .section-hero {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   padding-top: var(--space-2xl);
-  padding-bottom: var(--space-2xl);
+  padding-bottom: var(--space-xl);
 }
 
 .section-hero-sm {
@@ -51,7 +51,7 @@
 }
 
 .bg-dark {
-  background-color: var(--color-black);
+  background-color: var(--color-pure-black);
   color: var(--color-white);
 }
 
