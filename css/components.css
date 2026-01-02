@@ -809,6 +809,12 @@
 }
 
 /* Page-specific hero backgrounds */
+.hero-services,
+.hero-stories {
+  min-height: 50vh;
+  padding-bottom: calc(var(--space-xl) + 100px);
+}
+
 .hero-services {
   background: url('/assets/services.jpg?v=1') no-repeat center center;
   background-size: cover;
