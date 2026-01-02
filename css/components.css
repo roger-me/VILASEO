@@ -905,6 +905,36 @@ body:has(.hero-animated) .header .nav-toggle span {
   background-color: var(--color-white);
 }
 
+/* Light hero pages - override dark hero styles with BLACK text/nav */
+.page-light-hero .header .logo img {
+  filter: brightness(0) !important;
+}
+
+.page-light-hero .header .nav-menu a {
+  color: var(--color-black) !important;
+}
+
+.page-light-hero .header .nav-menu a:hover,
+.page-light-hero .header .nav-menu a.active {
+  color: var(--color-black) !important;
+  opacity: 0.7 !important;
+}
+
+.page-light-hero .header .btn-primary {
+  background-color: var(--color-black) !important;
+  color: var(--color-white) !important;
+}
+
+.page-light-hero .header .nav-toggle span {
+  background-color: var(--color-black) !important;
+}
+
+.page-light-hero .hero-eyebrow,
+.page-light-hero .hero-title,
+.page-light-hero .hero-subtitle {
+  color: var(--color-black) !important;
+}
+
 .hero-bg-shapes {
   display: none;
 }
