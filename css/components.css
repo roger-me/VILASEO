@@ -826,38 +826,38 @@
 }
 
 /* Light hero variant - black text for light banners */
-.hero-light .hero-eyebrow,
-.hero-light .hero-title,
-.hero-light .hero-subtitle {
-  color: var(--color-black);
+.hero-animated.hero-light .hero-eyebrow,
+.hero-animated.hero-light .hero-title,
+.hero-animated.hero-light .hero-subtitle {
+  color: var(--color-black) !important;
 }
 
-.hero-light .hero-subtitle {
+.hero-animated.hero-light .hero-subtitle {
   opacity: 0.7;
 }
 
 /* Override header styles for light hero pages */
 body:has(.hero-light) .header .logo img {
-  filter: brightness(0);
+  filter: brightness(0) !important;
 }
 
 body:has(.hero-light) .header .nav-menu a {
-  color: var(--color-gray-dark);
+  color: var(--color-gray-dark) !important;
 }
 
 body:has(.hero-light) .header .nav-menu a:hover,
 body:has(.hero-light) .header .nav-menu a.active {
-  color: var(--color-black);
-  opacity: 1;
+  color: var(--color-black) !important;
+  opacity: 1 !important;
 }
 
 body:has(.hero-light) .header .btn-primary {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--color-black) !important;
+  color: var(--color-white) !important;
 }
 
 body:has(.hero-light) .header .nav-toggle span {
-  background-color: var(--color-black);
+  background-color: var(--color-black) !important;
 }
 
 .hero-animated .hero-eyebrow,
