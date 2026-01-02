@@ -450,7 +450,7 @@
   height: 40px;
   width: auto;
   margin-bottom: var(--space-md);
-  filter: grayscale(100%);
+  filter: brightness(0);
 }
 
 .case-study-title {
