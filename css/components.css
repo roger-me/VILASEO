@@ -837,26 +837,26 @@
 }
 
 /* Override header styles for light hero pages */
-body:has(.hero-light) .header .logo img {
+.page-light-hero .header .logo img {
   filter: brightness(0) !important;
 }
 
-body:has(.hero-light) .header .nav-menu a {
+.page-light-hero .header .nav-menu a {
   color: var(--color-gray-dark) !important;
 }
 
-body:has(.hero-light) .header .nav-menu a:hover,
-body:has(.hero-light) .header .nav-menu a.active {
+.page-light-hero .header .nav-menu a:hover,
+.page-light-hero .header .nav-menu a.active {
   color: var(--color-black) !important;
   opacity: 1 !important;
 }
 
-body:has(.hero-light) .header .btn-primary {
+.page-light-hero .header .btn-primary {
   background-color: var(--color-black) !important;
   color: var(--color-white) !important;
 }
 
-body:has(.hero-light) .header .nav-toggle span {
+.page-light-hero .header .nav-toggle span {
   background-color: var(--color-black) !important;
 }
 
