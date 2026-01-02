@@ -265,10 +265,12 @@
   display: flex;
   flex-direction: column;
   height: auto;
+  position: relative;
 }
 
 .service-card:hover {
   transform: translateY(-2px);
+  cursor: pointer;
 }
 
 .service-card-icon {
@@ -303,6 +305,22 @@
 .service-card .link-arrow {
   font-size: 14px;
   margin-top: auto;
+}
+
+/* Make entire service card clickable */
+.service-card .link-arrow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* Services page - larger padding for detailed cards */
+.service-card-detailed {
+  padding: var(--space-lg) var(--space-xl);
 }
 
 /* KOL Card */
@@ -512,7 +530,7 @@
 /* White logos on dark background */
 .bg-dark .carousel-item img {
   filter: brightness(0) saturate(100%) invert(1);
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .bg-dark .carousel-item:hover img {
@@ -584,15 +602,27 @@
   color: var(--color-black);
 }
 
+.form-label.text-white,
+.bg-dark .form-label {
+  color: var(--color-white);
+  opacity: 1;
+}
+
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 14px 16px;
+  padding: 14px 20px;
   font-size: var(--text-body);
   background-color: var(--color-white);
   border: 1px solid var(--color-gray-border);
-  border-radius: var(--radius-sm);
+  border-radius: 34px;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-textarea {
+  border-radius: 24px;
+  min-height: 150px;
+  resize: vertical;
 }
 
 .form-input:focus,
@@ -605,11 +635,6 @@
 .form-input::placeholder,
 .form-textarea::placeholder {
   color: var(--color-gray-medium);
-}
-
-.form-textarea {
-  min-height: 150px;
-  resize: vertical;
 }
 
 .form-error {
@@ -742,7 +767,7 @@
 /* CTA Section */
 /* ==================== */
 .cta-section {
-  text-align: center;
+  text-align: left;
 }
 
 .cta-section .text-display {
