@@ -39,9 +39,33 @@
 }
 
 .header.scrolled {
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+}
+
+/* Reset nav colors when scrolled (override hero-animated styles) */
+.header.scrolled .logo img {
+  filter: brightness(0) !important;
+}
+
+.header.scrolled .nav-menu a {
+  color: var(--color-gray-dark) !important;
+}
+
+.header.scrolled .nav-menu a:hover,
+.header.scrolled .nav-menu a.active {
+  color: var(--color-black) !important;
+  opacity: 1 !important;
+}
+
+.header.scrolled .btn-primary {
+  background-color: var(--color-black) !important;
+  color: var(--color-white) !important;
+}
+
+.header.scrolled .nav-toggle span {
+  background-color: var(--color-black) !important;
 }
 
 .nav {
@@ -237,13 +261,13 @@
   background-color: var(--color-white);
   border-radius: 34px;
   padding: var(--space-md);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 .card-bordered {
@@ -533,13 +557,13 @@
   max-height: 40px;
   width: auto;
   filter: brightness(0) saturate(100%);
-  opacity: 0.4;
+  opacity: 1;
   transition: filter var(--transition-base), opacity var(--transition-base);
 }
 
 .carousel-item:hover img {
   filter: brightness(0) saturate(100%);
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 /* White logos on dark background */
@@ -670,8 +694,9 @@
 /* Footer */
 /* ==================== */
 .footer {
-  background-color: var(--color-gray-light);
-  padding: var(--space-xl) 0 var(--space-md);
+  background-color: var(--color-pure-black);
+  color: var(--color-white);
+  padding: var(--space-md) 0 var(--space-md);
 }
 
 .footer-content {
@@ -679,7 +704,7 @@
   flex-direction: column;
   gap: var(--space-lg);
   padding-bottom: var(--space-lg);
-  border-bottom: 1px solid var(--color-gray-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -698,7 +723,7 @@
 
 .footer-tagline {
   font-size: var(--text-caption);
-  color: var(--color-gray-dark);
+  color: var(--color-gray-medium);
 }
 
 .footer-nav {
@@ -709,12 +734,12 @@
 
 .footer-nav a {
   font-size: var(--text-caption);
-  color: var(--color-gray-dark);
+  color: var(--color-gray-medium);
   transition: color var(--transition-fast);
 }
 
 .footer-nav a:hover {
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 .footer-bottom {
@@ -724,7 +749,7 @@
 
 .footer-bottom p {
   font-size: var(--text-caption);
-  color: var(--color-gray-dark);
+  color: var(--color-gray-medium);
 }
 
 /* ==================== */
@@ -756,6 +781,82 @@
   gap: var(--space-sm);
 }
 
+/* Hero Animated Background */
+.hero-animated {
+  position: relative;
+  overflow: hidden;
+  background: url('../assets/top banner.jpg') no-repeat center center;
+  background-size: cover;
+  padding-bottom: calc(var(--space-2xl) + 150px);
+  margin-bottom: var(--space-xl);
+}
+
+/* White gradient transition at bottom of hero */
+.hero-animated::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(to bottom, transparent, var(--color-white));
+  pointer-events: none;
+}
+
+.hero-animated .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-animated .hero-eyebrow,
+.hero-animated .hero-title,
+.hero-animated .hero-subtitle {
+  color: var(--color-white);
+}
+
+.hero-animated .hero-subtitle {
+  opacity: 0.9;
+}
+
+.hero-animated .btn-outline {
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.hero-animated .btn-outline:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+/* Header on dark hero */
+.hero-animated ~ .header .logo img,
+body:has(.hero-animated) .header .logo img {
+  filter: brightness(0) invert(1);
+}
+
+body:has(.hero-animated) .header .nav-menu a {
+  color: var(--color-white);
+}
+
+body:has(.hero-animated) .header .nav-menu a:hover,
+body:has(.hero-animated) .header .nav-menu a.active {
+  color: var(--color-white);
+  opacity: 0.7;
+}
+
+body:has(.hero-animated) .header .btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+body:has(.hero-animated) .header .nav-toggle span {
+  background-color: var(--color-white);
+}
+
+.hero-bg-shapes {
+  display: none;
+}
+
 /* ==================== */
 /* Section Headers */
 /* ==================== */
@@ -776,6 +877,11 @@
   max-width: 640px;
   margin: 0 auto;
   color: var(--color-gray-dark);
+}
+
+/* Section header on dark background */
+.bg-dark .section-header .text-body-large {
+  color: var(--color-gray-medium);
 }
 
 /* ==================== */
